@@ -1,33 +1,42 @@
-import { View, Text } from "react-native";
-
+import { ScrollView, Text, View } from "react-native";
+import TopicCard from "../../components/TopicCard";
 export default function HomeScreen() {
   return (
-    <View
+    <ScrollView
       style={{
         flex: 1,
         backgroundColor: "#0f172a",
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
-      <Text
+      <View
         style={{
-          color: "white",
-          fontSize: 32,
-          fontWeight: "bold",
+          padding: 20,
+          marginTop: 50,
         }}
       >
-        LearnSteps
-      </Text>
+        <Text
+          style={{
+            color: "white",
+            fontSize: 32,
+            fontWeight: "bold",
+          }}
+        >
+          LearnSteps
+        </Text>
 
-      <Text
-        style={{
-          color: "#94a3b8",
-          marginTop: 10,
-        }}
-      >
-        Your DSA learning companion
-      </Text>
-    </View>
+        <Text
+          style={{
+            color: "#94a3b8",
+            marginTop: 8,
+            fontSize: 16,
+          }}
+        >
+          Master DSA step by step
+        </Text>
+        <TopicCard title="Arrays" />
+        <TopicCard title="Graphs"  />
+        <TopicCard title="Dynamic Programming"  />
+      </View>
+    </ScrollView>
   );
 }
