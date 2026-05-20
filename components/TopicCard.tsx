@@ -1,4 +1,36 @@
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
+
+type TopicCardProps = {
+  title: string;
+  onPress: () => void;
+};
+
+export default function TopicCard({
+  title,
+  onPress,
+}: TopicCardProps) {
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      style={{
+        backgroundColor: "#1e293b",
+        padding: 20,
+        borderRadius: 16,
+        marginBottom: 15,
+      }}
+    >
+      <Text
+        style={{
+          color: "white",
+          fontSize: 20,
+          fontWeight: "bold",
+        }}
+      >
+        {title}
+      </Text>
+    </TouchableOpacity>
+  );
+}import { Text, View } from "react-native";
 
 type TopicCardProps = {
   title: string;
