@@ -1,5 +1,7 @@
 import { ScrollView, Text, View } from "react-native";
 import TopicCard from "../../components/TopicCard";
+import { router } from "expo-router";
+
 export default function HomeScreen() {
   return (
     <ScrollView
@@ -33,9 +35,20 @@ export default function HomeScreen() {
         >
           Master DSA step by step
         </Text>
-        <TopicCard title="Arrays" />
-        <TopicCard title="Graphs"  />
-        <TopicCard title="Dynamic Programming"  />
+        <TopicCard
+  title="Arrays"
+  onPress={() => router.push("/topic")}
+/>
+
+<TopicCard
+  title="Graphs"
+  onPress={() => router.push("/topic")}
+/>
+
+<TopicCard
+  title="Dynamic Programming"
+  onPress={() => router.push("/topic")}
+/>
       </View>
     </ScrollView>
   );
